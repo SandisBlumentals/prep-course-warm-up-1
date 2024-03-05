@@ -1,10 +1,7 @@
 export {};
 
 function isBlank (word:any){
-    if (word = "")
-        return true;
-    else 
-        return false;
+    return (!word || /^\s*$/.test(word));
 }
 /**
  * Create a function called isBlank, which checks if passed string is blank or not
