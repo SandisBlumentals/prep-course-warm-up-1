@@ -1,5 +1,11 @@
 export {};
 
+function isBlank (word:any){
+    if (word = "")
+        return true;
+    else 
+        return false;
+}
 /**
  * Create a function called isBlank, which checks if passed string is blank or not
  */
