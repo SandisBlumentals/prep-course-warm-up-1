@@ -9,7 +9,13 @@ export {};
  */
 
 // You are allowed to change only this function
-function formatCurrency() {}
+function formatCurrency(num:number) {
+  let pounds = Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP',
+  });
+  return pounds.format(num);
+}
 
 function calculateSalesTax(price: number) {
   return price * 0.21;

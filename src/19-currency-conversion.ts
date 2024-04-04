@@ -14,15 +14,22 @@ export {};
  * and use them in place of convertToUSD() and convertToBRL()
  */
 
+function fee (price):number{
+    return price/100;
+}
 // You are allowed to change this function
-function convertToUSD(price) {}
+function convertToUSDPlusFee(price:number) {
+    return (price*1.4+fee(price));
+}
 // You are allowed to change this function
-function convertToBRL(price) {}
+function convertToBRLPlusFee(price:number) {
+    return (price*6.35+fee(price));
+}
 
 const product = "You don't know JS";
 const price = 12.5;
-const priceInUSD = convertToUSD(price);
-const priceInBRL = convertToBRL(price);
+const priceInUSD = convertToUSDPlusFee(price).toFixed(2);
+const priceInBRL = convertToBRLPlusFee(price).toFixed(2);
 
 console.log("Product: " + product);
 console.log("Price: $" + priceInUSD);
