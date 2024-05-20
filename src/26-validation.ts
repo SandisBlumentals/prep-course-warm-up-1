@@ -11,7 +11,20 @@ export {};
 const excludedNums = [6, 14, 91, 111];
 
 // You are allowed to edit only this function
-function validate(num) {}
+function validate(num:any) {
+  if (typeof num === "number"){
+    if (num % 1 === 0){
+      for (var i = 0; i<excludedNums.length; i++){
+        if (num === excludedNums[i]){
+          return false;
+        }
+        else return true;
+      }
+    }
+    else return false;
+  }
+  else return false;
+}
 
 console.log(validate(6));
 console.log(validate(10.5));

@@ -7,5 +7,7 @@ export {};
  *  - https://www.w3schools.com/js/js_arrays.asp
  *  - https://javascript.info/array
  */
-
+function stringToArray (str:string[]){
+    return str.toString().split(" ");
+}
 console.log(stringToArray(["John Doe"])); // Expected output: ['John', 'Doe']
