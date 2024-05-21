@@ -1,6 +1,15 @@
 export {};
 
-const removeFromArray = function() {};
+const removeFromArray = function(arr:Array<number>, ...num:any) {
+    for (var i = 0; i < arr.length; i++){
+        for (var valueToRemove of num) {
+            if(arr[i] === valueToRemove){
+                arr.splice(i, 1);
+            }
+        }
+    }
+    return arr;
+};
 
 console.log(removeFromArray([1, 2, 3, 4], 3)); // Expected output: [1, 2, 4]
 console.log(removeFromArray([1, 2, 3, 4], 7)); // Expected output: [1, 2, 3, 4]

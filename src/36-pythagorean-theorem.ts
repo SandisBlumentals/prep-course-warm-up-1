@@ -10,7 +10,9 @@ export {};
  * and name them in your function accordingly.
  */
 
-const pythagoreanTheorem = () => {};
+const pythagoreanTheorem = (leftSide:number,rightSide:number) => {
+    return Math.sqrt(leftSide * leftSide + rightSide * rightSide);;
+};
 
 console.log(pythagoreanTheorem(2, 4)); // Expected result: 4.47213595499958
 console.log(pythagoreanTheorem(3, 4)); // Expected result: 5
